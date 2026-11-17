@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Encryptor · AES-256 in your browser</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="container">
+    <header>
+      <h1>🔐 Encryptor</h1>
+      <p>Lock a message with a password. Only someone with the same password can read it.</p>
+      <p class="badge">AES-256-GCM · PBKDF2 · runs 100% in your browser</p>
+    </header>
+
+    <div class="tabs" role="tablist">
+      <button class="tab active" data-mode="encrypt" role="tab" aria-selected="true">Encrypt</button>
+      <button class="tab" data-mode="decrypt" role="tab" aria-selected="false">Decrypt</button>
+    </div>
+
+    <section class="card">
+      <label for="message" id="message-label">Message</label>
+      <textarea id="message" rows="5" placeholder="Type a secret message..."></textarea>
+
+      <label for="password">Password</label>
+      <div class="password-row">
+        <input id="password" type="password" placeholder="Choose a strong password" autocomplete="off" />
+        <button id="toggle-password" class="ghost" type="button" aria-label="Show password">👁️</button>
+      </div>
+      <div id="strength" class="strength" aria-live="polite"></div>
+
+      <button id="run" class="primary" type="button">🔒 Encrypt</button>
+    </section>
+
+    <section class="card output hidden" id="output-card">
+      <div class="output-head">
+        <span id="output-label">Encrypted text</span>
+        <button id="copy" class="ghost" type="button">📋 Copy</button>
+      </div>
+      <pre id="output"></pre>
+    </section>
+
+    <p id="status" class="status" role="status"></p>
+
+    <footer>
+      Nothing is sent anywhere. Your message and password never leave this page.<br />
+      Built by <a href="https://github.com/abuka920">Kalif Abu</a>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
