@@ -43,4 +43,4 @@ The salt and IV are stored with the ciphertext, so the password is the only thin
 
 ---
 
-Built by **Kalif Abu** · [LinkedIn](https://linkedin.com/in/kalifabu)
+Built by **Kalif Abu** · [LinkedIn](https://linkedin.com/in/kalif-abu-262430264)
